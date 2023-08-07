@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="content">
+    <h2>Currency Exchange</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="currency">Currency Code:</label>
+        <input type="text" id="currency" [(ngModel)]="currencyValue" name="currency" />
+      </div>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="nameValue" name="name" />
+      </div>
+      <button type="submit">Get Currency Value</button>
+      <button class="getButton" (click)="getAllRecords()">Get All Records</button>
+      <div class="records-table" *ngIf="allRecords">
+        <table>
+          <thead>
+            <tr>
+              <th>Currency</th>
+              <th>Name</th>
+              <th>Value</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let record of allRecords">
+              <td>{{ record.currency }}</td>
+              <td>{{ record.name }}</td>
+              <td>{{ record.value }}</td>
+              <td>{{ record.date | date: 'medium' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+    <div *ngIf="(currencyInvalid && showError) || (nameInvalid && showError)">
+      <p class="errorCode">Niewłaściwy kod lub brak nazwy</p>
+    </div>
+    <ng-container *ngIf="currencyValid && !currencyInvalid || currencyValid && !nameInvalid">
+      <p><strong>Currency Code:</strong> {{ currencyValue }}</p>
+      <p><strong>Name:</strong> {{ nameValue }}</p>
+      <p><strong>Value:</strong> {{ request?.value }}</p>
+      <p><strong>Date:</strong> {{ request?.date | date: 'medium' }}</p>
+    </ng-container>
+  </div>
+</div>

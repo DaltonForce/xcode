@@ -1,0 +1,14 @@
+com/example/currencies/model/CurrencyResponse.java
+ com.example.currencies.model.CurrencyResponse
+com/example/currencies/model/CurrencyRequest.java
+ com.example.currencies.model.CurrencyRequest
+com/example/currencies/repository/CurrencyRequestRepository.java
+ com.example.currencies.repository.CurrencyRequestRepository
+com/example/currencies/service/CurrencyService.java
+ com.example.currencies.service.CurrencyService
+com/example/currencies/model/Rate.java
+ com.example.currencies.model.Rate
+com/example/currencies/controller/CurrencyController.java
+ com.example.currencies.controller.CurrencyController
+com/example/currencies/CurrenciesApplication.java
+ com.example.currencies.CurrenciesApplication

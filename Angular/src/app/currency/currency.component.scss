@@ -1,0 +1,105 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Lato';
+}
+
+.content {
+    width: 25%;
+    background-color: black;
+    border: 3px solid;
+    border-radius: 4px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.content button {
+    background-color: #8a2be2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 24px;
+}
+
+.content .getButton {
+    background-color: #6a1b02;
+}
+
+.content input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 24px;
+}
+
+.success {
+    border-color: green;
+    animation: borderSuccess 2s forwards;
+}
+
+.error {
+    border-color: red;
+    animation: borderError 2s forwards;
+}
+
+@keyframes borderSuccess {
+    to {
+        border-color: #006400;
+    }
+}
+
+@keyframes borderError {
+    to {
+        border-color: #8b0000;
+    }
+}
+
+.errorCode {
+    color: red;
+    font-style: bold;
+}
+
+.records-table {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+
+.table-container {
+    overflow-x: auto;
+    max-height: 200px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 20px;
+    table-layout: fixed;
+    color: white;
+  }
+  
+  th, td {
+    border: 1px solid #555;
+    padding: 8px;
+    text-align: left;
+  }
